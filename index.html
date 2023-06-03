@@ -8,6 +8,25 @@
 </head>
 <body>
     <h2>usuario logeado</h2>
-    <script src="script.js"></script>
+    <a id="consultarSaldo" href="#" >consultar saldo</a>
+    <input type="text" class="saldo">
+    <table class="tablaOperaciones">
+        <tr style="display: none;" id="iniTabla">      
+          <th>dia y fecha   </th>      
+          <th> numero de Cajero</th>      
+          <th> tipo de operacion</th>     
+        </tr>
+    </table>
+    <a id="consultarOperaciones" href="#" >historial</a>
+    <a class="consignar" href="#" >consignar</a>
+    
+    <p id="mensajeConsigancion"></p>
+        <section style="display: none;" class="menuConsignar">
+            <label for="">ingrese el valor que desea consignar y despues de esto oprima Aceptar</label>
+            <input type="text" class="valorConsignar">
+            <button class="aceptarConsignacion">consignar</button>
+        </section>
+        
+    <script src="scriptSaldo.js"></script>
 </body>
 </html>
