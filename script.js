@@ -1,10 +1,10 @@
-let currentUser = 1
+// let currentUser = 1
 
-switch (currentUser) {
-    case 1:
-        location.href="login.html"
-        break;
-}
+// switch (currentUser) {
+//     case 1:
+//         location.href="login.html"
+//         break;
+// }
 let usuarios=["jhon","christian","jhonatan"]
 let contraseñas=[1111,2222,3333]
 
