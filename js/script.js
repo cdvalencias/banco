@@ -1,56 +1,41 @@
-(function($) {
-  "use strict"; // Start of use strict
+// let currentUser = 1
 
-  // Toggle the side navigation
-  $("#sidebarToggle, #sidebarToggleTop").on('click', function(e) {
-    $("body").toggleClass("sidebar-toggled");
-    $(".sidebar").toggleClass("toggled");
-    if ($(".sidebar").hasClass("toggled")) {
-      $('.sidebar .collapse').collapse('hide');
-    };
-  });
+// switch (currentUser) {
+//     case 1:
+//         location.href="login.html"
+//         break;
+// }
+let usuarios=["jhon","christian","jhonatan"]
+let passwords=[1111,2222,3333]
 
-  // Close any open menu accordions when window is resized below 768px
-  $(window).resize(function() {
-    if ($(window).width() < 768) {
-      $('.sidebar .collapse').collapse('hide');
-    };
-    
-    // Toggle the side navigation when window is resized below 480px
-    if ($(window).width() < 480 && !$(".sidebar").hasClass("toggled")) {
-      $("body").addClass("sidebar-toggled");
-      $(".sidebar").addClass("toggled");
-      $('.sidebar .collapse').collapse('hide');
-    };
-  });
+let usuario=document.querySelector("#usuario")
+let password=document.querySelector("#password")
 
-  // Prevent the content wrapper from scrolling when the fixed side navigation hovered over
-  $('body.fixed-nav .sidebar').on('mousewheel DOMMouseScroll wheel', function(e) {
-    if ($(window).width() > 768) {
-      var e0 = e.originalEvent,
-        delta = e0.wheelDelta || -e0.detail;
-      this.scrollTop += (delta < 0 ? 1 : -1) * 30;
-      e.preventDefault();
-    }
-  });
 
-  // Scroll to top button appear
-  $(document).on('scroll', function() {
-    var scrollDistance = $(this).scrollTop();
-    if (scrollDistance > 100) {
-      $('.scroll-to-top').fadeIn();
-    } else {
-      $('.scroll-to-top').fadeOut();
-    }
-  });
 
-  // Smooth scrolling using jQuery easing
-  $(document).on('click', 'a.scroll-to-top', function(e) {
-    var $anchor = $(this);
-    $('html, body').stop().animate({
-      scrollTop: ($($anchor.attr('href')).offset().top)
-    }, 1000, 'easeInOutExpo');
+
+let aceptar=document.querySelector("#login")
+aceptar.addEventListener("click",validar)
+
+let intentos = 0
+
+function validar(e) {
     e.preventDefault();
-  });
-
-})(jQuery); // End of use strict
+    let errorLogin=document.querySelector(".error")  
+    if (intentos < 2) {   
+        intentos = intentos + 1
+        for (let i =0 ; i <= usuarios.length ; i++) { 
+            if (usuarios[i]== usuario.value && passwords[i]==password.value) {
+                currentUser=usuario.value
+                location.href="index.html"   
+            }else{                                
+                errorLogin.textContent="usuario o contraseña no valido"
+                password.value = ""
+            }            
+        }              
+    }else{
+        errorLogin.textContent="has superado el limite de intentos"
+        password.value = ""
+        aceptar.style.display = "none";
+    }
+}
