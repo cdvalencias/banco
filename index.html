@@ -28,7 +28,7 @@
 
             <!-- consultar saldo -->
             <li class="nav-item active">
-                <a class="nav-link" href="saldo.html">
+                <a id="consultarSaldo" class="nav-link" href="#">
                     <span>Consultar saldo</span></a>
             </li>
             <!-- Retirar -->
@@ -109,7 +109,151 @@
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
                     <h1 class="h3 mb-0 text-gray-800">Banco De Valencia</h1>
                 </div>
+                <div class="row">
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-success shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                            Saldo Disponible</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800 saldo"></div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <h1 class="h3 mb-4 text-gray-800">Retirar saldo</h1>
+                    <!-- Formulario retirar -->
+                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group">
+                                <input type="text" class="form-control bg-light border-0 small" placeholder="Monto a retirar"
+                                aria-label="Search" aria-describedby="basic-addon2">                   
+                                <div class="input-group-append">
+                                <button class="btn btn-primary" type="button">
+                                    <i>Confirmar transaccion</i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="row">
+                    <h1 class="h3 mb-4 text-gray-800">Realizar transferencia</h1>
+                <!-- Formulario consignar -->
+                <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                    <div class="input-group">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Monto a transferir"
+                            aria-label="Search" aria-describedby="basic-addon2">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Cuenta del receptor"
+                            aria-label="Search" aria-describedby="basic-addon2">    
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="button">
+                                <i>Confirmar transaccion</i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                </div>
+                <div class="row">
+                    <h1 class="h3 mb-4 text-gray-800">Realizar consignacion</h1>
+                <!-- Formulario consignar -->
+                <form
 
+                
+                    class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                    <div class="input-group">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Monto a transferir"
+                            aria-label="Search" aria-describedby="basic-addon2">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Cuenta del receptor"
+                            aria-label="Search" aria-describedby="basic-addon2">    
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="button">
+                                <i>Confirmar transaccion</i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                </div>
+                <div class="row">
+                    <p class="mb-4">Este es el resumen de movimientos de tu cuenta bancaria</a>.</p>
+
+                    <!-- DataTales Example -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Fecha</th>
+                                            <th>Movimiento</th>
+                                            <th>Destino</th>
+                                            <th>Valor</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                    <tbody>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                    <tbody>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        
+                                    </tbody><tbody>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                    <tbody>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <!-- Content Row -->
                     <div class="row">
 
@@ -154,7 +298,8 @@
 
     </div>
     <!-- End of Page Wrapper -->
-  <script type="javascript" src="js/script.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/scriptSaldo.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

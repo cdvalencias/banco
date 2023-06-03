@@ -31,11 +31,12 @@ function OcultarTablaHistoria() {
 // funcion que muestra el saldo y oculta la tabla del historial
 function saldo(e) {
     e.preventDefault();
+    console.log("entro a saldo")
     let saldos = document.querySelector(".saldo")
-    saldos.value = "su saldo es " + saldoUsuario
+    saldos.textContent = "su saldo es " + saldoUsuario
 
-    tablas()
-    OcultarTablaHistoria()
+    // tablas()
+    // OcultarTablaHistoria()
  }
 //creacion de evento que muestra el historial
 let consultarOperaciones = document.querySelector("#consultarOperaciones")
