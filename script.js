@@ -16,8 +16,8 @@ aceptar.addEventListener("click",validar)
 
 let intentos = 0
 
-console.log(currentUser)
- console.log("jdjdjj")
+// console.log(currentUser)
+//  console.log("jdjdjj")
 function validar(e) {
     e.preventDefault();    
     let errorLogin=document.querySelector(".error")  

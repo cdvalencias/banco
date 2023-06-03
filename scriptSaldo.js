@@ -75,6 +75,7 @@ function consignar(e) {
     valorConsignar.value 
     console.log(valorConsignar.value)  
 }
+
 let aceptarconsignacion = document.querySelector(".aceptarConsignacion")
 aceptarconsignacion.addEventListener("click",sola)
 function sola() {
