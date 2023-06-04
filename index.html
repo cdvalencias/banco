@@ -33,27 +33,27 @@
             </li>
             <!-- Retirar -->
             <li class="nav-item active">
-                <a class="nav-link" href="retirar.html">
+                <a id="retirarSaldo" class="nav-link" href="#">
                     <span>Retirar saldo</span></a>
             </li>
             </li>
 
             <!-- Transferir -->
             <li class="nav-item active">
-                <a class="nav-link" href="transferir.html">
+                <a class="nav-link" href="#">
                     <span>Transferir dinero</span></a>
             </li>
 
  
             <!--Consignar -->
-            <li class="nav-item active">
-                <a class="nav-link" href="consignar.html">
+            <li class="nav-item active ">
+                <a class="nav-link consignar" href="#">
                     <span>Consignar dinero</span></a>
             </li>
 
             <!-- Resumen -->
             <li class="nav-item active">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" id="consultarOperaciones" href="#">
                     <span>Movimientos</span></a>
             </li>
 
@@ -92,7 +92,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                    <span class="mr-2 d-none d-lg-inline text-gray-600 small nombreUsuario">Douglas McGee</span>
                                     <img class="img-profile rounded-circle"
                                 src="img/undraw_profile.svg">
                             </a>   
@@ -132,11 +132,11 @@
                     <!-- Formulario retirar -->
                     <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
-                                <input type="text" class="form-control bg-light border-0 small" placeholder="Monto a retirar"
+                                <input type="text" class="form-control bg-light border-0 small saldoARetirar" placeholder="Monto a retirar"
                                 aria-label="Search" aria-describedby="basic-addon2">                   
                                 <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
-                                    <i>Confirmar transaccion</i>
+                                <button class="btn btn-primary aceptarRetiro" type="button">
+                                    <i>Confirmar retiro</i>
                                 </button>
                             </div>
                         </div>
@@ -160,20 +160,19 @@
                 </form>
                 </div>
                 <div class="row">
-                    <h1 class="h3 mb-4 text-gray-800">Realizar consignacion</h1>
                 <!-- Formulario consignar -->
-                <form
-
+                <h1 class="h3 mb-4 text-gray-800">Realizar consignacion</h1>
                 
-                    class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                    <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Monto a transferir"
-                            aria-label="Search" aria-describedby="basic-addon2">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Cuenta del receptor"
+                <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search" >
+                     <!--<p id="mensajeConsigancion"></p>-->
+                    <div class="input-group  menuConsignar" >
+                            <input type="number" class="form-control bg-light border-0 small valorConsignar" placeholder="Monto a transferir"
+                            aria-label="Search" aria-describedby="basic-addon2" >
+                            <input type="text" class="form-control bg-light border-0 small numCuentaConsignar" placeholder="Cuenta del receptor"
                             aria-label="Search" aria-describedby="basic-addon2">    
                         <div class="input-group-append">
-                            <button class="btn btn-primary" type="button">
-                                <i>Confirmar transaccion</i>
+                            <button class="btn btn-primary aceptarConsignacion" type="button">
+                                <i>Confirmar consignacion</i>
                             </button>
                         </div>
                     </div>
@@ -188,67 +187,12 @@
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>Fecha</th>
-                                            <th>Movimiento</th>
-                                            <th>Destino</th>
-                                            <th>Valor</th>
-                                        </tr>
-                                    </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th></th>
-                                            <th></th>
-                                            <th></th>
-                                            <th></th>
-                                        </tr>
-                                    </tfoot>
-                                    <tbody>
-                                        <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        
-                                    </tbody>
-                                    <tbody>
-                                        <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        
-                                    </tbody>
-                                    <tbody>
-                                        <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        
-                                    </tbody><tbody>
-                                        <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        
-                                    </tbody>
-                                    <tbody>
-                                        <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        
-                                    </tbody>
+                                <table class="table table-bordered tablaOperaciones" id="dataTable" width="100%" cellspacing="0">
+                                    <tr class="table table-bordered" style="display: none;" id="iniTabla" width="100%" cellspacing="0">      
+                                        <th >dia y fecha   </th>      
+                                        <th> numero de Cajero</th>      
+                                        <th> tipo de operacion</th>     
+                                    </tr>
                                 </table>
                             </div>
                         </div>

@@ -27,7 +27,9 @@ function validar(e) {
         for (let i =0 ; i <= usuarios.length ; i++) { 
             if (usuarios[i]== usuario.value && passwords[i]==password.value) {
                 currentUser=usuario.value
-                location.href="index.html"   
+                location.href="index.html" 
+                // let nombreUsuario = document.querySelector(".nombreUsuario") 
+                // nombreUsuario.textContent = usuarios[i] 
             }else{                                
                 errorLogin.textContent="usuario o contraseña no valido"
                 password.value = ""
