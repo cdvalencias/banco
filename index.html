@@ -109,6 +109,7 @@
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
                     <h1 class="h3 mb-0 text-gray-800">Banco De Valencia</h1>
                 </div>
+                <!-- retirar saldo -->
                 <div class="row">
                     <div class="col-xl-3 col-md-6 mb-4">
                         <div class="card border-left-success shadow h-100 py-2">
@@ -127,34 +128,36 @@
                         </div>
                     </div>
                 </div>
+                <!-- retirar saldo -->
                 <div class="row">
                     <h1 class="h3 mb-4 text-gray-800">Retirar saldo</h1>
-                    <!-- Formulario retirar -->
+                <!-- Formulario transferir -->
                     <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                        <div class="input-group">
-                                <input type="text" class="form-control bg-light border-0 small" placeholder="Monto a retirar"
-                                aria-label="Search" aria-describedby="basic-addon2">                   
-                                <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
-                                    <i>Confirmar transaccion</i>
-                                </button>
+                        <div class="input-group Monto">
+                            <label  for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Monto a retirar</label>
+                            <input type="text" class="form-control form-control-lg col-sm-3 " id="colFormLabelLg"> 
+                            <div class="input-group-append">
+                                    <button class="btn-primary buttonConfirmar " type="button">
+                                        <i>Confirmar transaccion</i>
+                                    </button>
                             </div>
                         </div>
                     </form>
                 </div>
+                <!-- transferir saldo -->
                 <div class="row">
                     <h1 class="h3 mb-4 text-gray-800">Realizar transferencia</h1>
                 <!-- Formulario consignar -->
                 <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                     <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Monto a transferir"
-                            aria-label="Search" aria-describedby="basic-addon2">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Cuenta del receptor"
-                            aria-label="Search" aria-describedby="basic-addon2">    
+                        <label for="colFormLabelLg" class="col-sm-3 col-form-label col-form-label-lg">Monto a transferir</label>
+                        <input type="text" class="form-control form-control-lg col-sm-3 " id="colFormLabelLg"> 
+                        <label for="colFormLabelLg" class="col-sm-3 col-form-label col-form-label-lg">Cuenta del receptor</label>
+                        <input type="text" class="form-control form-control-lg col-sm-3 " id="colFormLabelLg"> 
                         <div class="input-group-append">
-                            <button class="btn btn-primary" type="button">
-                                <i>Confirmar transaccion</i>
-                            </button>
+                                <button class="btn-primary buttonConfirmar " type="button">
+                                    <i>Confirmar transaccion</i>
+                                </button>
                         </div>
                     </div>
                 </form>
@@ -162,19 +165,16 @@
                 <div class="row">
                     <h1 class="h3 mb-4 text-gray-800">Realizar consignacion</h1>
                 <!-- Formulario consignar -->
-                <form
-
-                
-                    class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                     <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Monto a transferir"
-                            aria-label="Search" aria-describedby="basic-addon2">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Cuenta del receptor"
-                            aria-label="Search" aria-describedby="basic-addon2">    
+                        <label for="colFormLabelLg" class="col-sm-3 col-form-label col-form-label-lg">Monto a consignar</label>
+                        <input type="text" class="form-control form-control-lg col-sm-3 " id="colFormLabelLg"> 
+                        <label for="colFormLabelLg" class="col-sm-3 col-form-label col-form-label-lg">Cuenta del receptor</label>
+                        <input type="text" class="form-control form-control-lg col-sm-3 " id="colFormLabelLg"> 
                         <div class="input-group-append">
-                            <button class="btn btn-primary" type="button">
-                                <i>Confirmar transaccion</i>
-                            </button>
+                                <button class="btn-primary buttonConfirmar " type="button">
+                                    <i>Confirmar transaccion</i>
+                                </button>
                         </div>
                     </div>
                 </form>
@@ -182,120 +182,59 @@
                 <div class="row">
                     <p class="mb-4">Este es el resumen de movimientos de tu cuenta bancaria</a>.</p>
 
-                    <!-- DataTales Example -->
-                    <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                        </div>
-                        <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>Fecha</th>
-                                            <th>Movimiento</th>
-                                            <th>Destino</th>
-                                            <th>Valor</th>
-                                        </tr>
-                                    </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th></th>
-                                            <th></th>
-                                            <th></th>
-                                            <th></th>
-                                        </tr>
-                                    </tfoot>
-                                    <tbody>
-                                        <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        
-                                    </tbody>
-                                    <tbody>
-                                        <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        
-                                    </tbody>
-                                    <tbody>
-                                        <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        
-                                    </tbody><tbody>
-                                        <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        
-                                    </tbody>
-                                    <tbody>
-                                        <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- Movimientos -->
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Fecha</th>
+                            <th scope="col">Movimiento</th>
+                            <th scope="col">Destino</th>
+                            <th scope="col">Valor</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th>fecha</th>
+                            <td>movimiento</td>
+                            <td>destino</td>
+                            <td>valor</td>
+                          </tr>
+                          <tr>
+                            <th>fecha</th>
+                            <td>movimiento</td>
+                            <td>destino</td>
+                            <td>valor</td>
+                          </tr>
+                          <tr>
+                            <th>fecha</th>
+                            <td>movimiento</td>
+                            <td>destino</td>
+                            <td>valor</td>
+                          </tr>
+                          <tr>
+                            <th>fecha</th>
+                            <td>movimiento</td>
+                            <td>destino</td>
+                            <td>valor</td>
+                          </tr>
+                          <tr>
+                            <th>fecha</th>
+                            <td>movimiento</td>
+                            <td>destino</td>
+                            <td>valor</td>
+                          </tr>
+                        </tbody>
+                      </table>
                 </div>
                 <!-- Content Row -->
                     <div class="row">
-
-                <img class="banco1" src="https://upload.wikimedia.org/wikipedia/ca/thumb/f/f5/Logo_Banc_de_Val%C3%A8ncia.svg/1200px-Logo_Banc_de_Val%C3%A8ncia.svg.png"
-                 alt="">
-                <!-- Content Row -->
-
-                    <div class="row">
-
-                    
-
-                       
+                        <img class="banco1" src="https://upload.wikimedia.org/wikipedia/ca/thumb/f/f5/Logo_Banc_de_Val%C3%A8ncia.svg/1200px-Logo_Banc_de_Val%C3%A8ncia.svg.png"alt="">
+                     </div>
                     </div>
-
-                    <!-- Content Row -->
-                    <div class="row">
-
-                        <!-- Content Column -->
-                        <div class="col-lg-6 mb-4">
-
-                            
-                            
-
-                        <div class="col-lg-6 mb-4">
-
-                           
-
-
-
-                        </div>
-                    </div>
-
                 </div>
-                <!-- /.container-fluid -->
-
             </div>
-
-            
-
         </div>
         <!-- End of Content Wrapper -->
-
     </div>
     <!-- End of Page Wrapper -->
   <script src="js/script.js"></script>
