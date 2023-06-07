@@ -1,0 +1,128 @@
+<div class="container-fluid">
+                    
+    <!-- Titulo de lña pagina -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Banco De Valencia</h1>
+    </div>
+    <!-- retirar saldo -->
+    <div class="row">
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                Saldo Disponible</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800 saldo"></div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- retirar saldo -->
+    <div class="row">
+        <h1 class="h3 mb-4 text-gray-800">Retirar saldo</h1>
+    <!-- Formulario transferir -->
+        <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+            <div class="input-group">
+                <label  for="montoRetirar" class="col-sm-2 col-form-label col-form-label-lg">Monto a retirar</label>
+                <input type="text" class="form-control form-control-lg col-sm-3" id="montoRetirar"> 
+                <div class="input-group-append">
+                        <button class="btn-primary buttonConfirmar" type="button">
+                            <i>Confirmar transaccion</i>
+                        </button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- transferir saldo -->
+    <div class="row">
+        <h1 class="h3 mb-4 text-gray-800">Realizar transferencia</h1>
+    <!-- Formulario transferir -->
+    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+        <div class="input-group">
+            <label for="montoTransferencia" class="col-sm-3 col-form-label col-form-label-lg">Monto a transferir</label>
+            <input type="text" class="form-control form-control-lg col-sm-3 " id="montoTransferencia"> 
+            <label for="cuentaReceptor" class="col-sm-3 col-form-label col-form-label-lg">Cuenta del receptor</label>
+            <input type="text" class="form-control form-control-lg col-sm-3 " id="cuentaReceptor"> 
+            <div class="input-group-append">
+                    <button class="btn-primary buttonConfirmar " type="button">
+                        <i>Confirmar transaccion</i>
+                    </button>
+            </div>
+        </div>
+    </form>
+    </div>
+    <div class="row">
+        <h1 class="h3 mb-4 text-gray-800">Realizar consignacion</h1>
+    <!-- Formulario consignar -->
+    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+        <div class="input-group">
+            <label for="montoConsignacion" class="col-sm-3 col-form-label col-form-label-lg">Monto a consignar</label>
+            <input type="text" class="form-control form-control-lg col-sm-3 " id="montoConsignacion"> 
+            <label for="receptorTransferencia" class="col-sm-3 col-form-label col-form-label-lg">Cuenta del receptor</label>
+            <input type="text" class="form-control form-control-lg col-sm-3 " id="receptorTransferencia"> 
+            <div class="input-group-append">
+                    <button class="btn-primary buttonConfirmar " type="button">
+                        <i>Confirmar transaccion</i>
+                    </button>
+            </div>
+        </div>
+    </form>
+    </div>
+    <div class="row">
+        <p class="mb-4">Este es el resumen de movimientos de tu cuenta bancaria</a>.</p>
+
+        <!-- Movimientos -->
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Fecha</th>
+                <th scope="col">Movimiento</th>
+                <th scope="col">Destino</th>
+                <th scope="col">Valor</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>fecha</th>
+                <td>movimiento</td>
+                <td>destino</td>
+                <td>valor</td>
+              </tr>
+              <tr>
+                <th>fecha</th>
+                <td>movimiento</td>
+                <td>destino</td>
+                <td>valor</td>
+              </tr>
+              <tr>
+                <th>fecha</th>
+                <td>movimiento</td>
+                <td>destino</td>
+                <td>valor</td>
+              </tr>
+              <tr>
+                <th>fecha</th>
+                <td>movimiento</td>
+                <td>destino</td>
+                <td>valor</td>
+              </tr>
+              <tr>
+                <th>fecha</th>
+                <td>movimiento</td>
+                <td>destino</td>
+                <td>valor</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+    <!-- Content Row -->
+        <div class="row">
+            <img class="banco1" src="https://upload.wikimedia.org/wikipedia/ca/thumb/f/f5/Logo_Banc_de_Val%C3%A8ncia.svg/1200px-Logo_Banc_de_Val%C3%A8ncia.svg.png"alt="">
+         </div>
+        </div>
