@@ -53,6 +53,7 @@ function tablasConsultarSaldo() {
     let tr = document.createElement("tr")
     let tdFecha = document.createElement("td")
     let tdCajero = document.createElement("td")
+    tdCajero.style.textAlign = "center";
     let tdOperaciones = document.createElement("td")
     let tabla = document.querySelector(".tablaOperaciones")
 
@@ -73,6 +74,7 @@ function tablaConsignar() {
     let tr = document.createElement("tr")
     let tdFecha = document.createElement("td")
     let tdCajero = document.createElement("td")
+    tdCajero.style.textAlign = "center";
     let tdOperaciones = document.createElement("td")
     let tabla = document.querySelector(".tablaOperaciones")
 
@@ -92,6 +94,7 @@ function tablaRetirar() {
     let tr = document.createElement("tr")
     let tdFecha = document.createElement("td")
     let tdCajero = document.createElement("td")
+    tdCajero.style.textAlign = "center";
     let tdOperaciones = document.createElement("td")
     let tabla = document.querySelector(".tablaOperaciones")
 
@@ -111,6 +114,7 @@ function tablaTransferir() {
     let tr = document.createElement("tr")
     let tdFecha = document.createElement("td")
     let tdCajero = document.createElement("td")
+    tdCajero.style.textAlign = "center";
     let tdOperaciones = document.createElement("td")
     let tabla = document.querySelector(".tablaOperaciones")
 
