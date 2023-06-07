@@ -144,7 +144,7 @@ function saldo(e) {
     }else{
         nuevosaldo = nuevosaldo
     }
-    saldos.value = nuevosaldo
+    saldos.textContent = nuevosaldo
     tablasConsultarSaldo()
     OcultarTablaHistoria()
     let ocultarSaldo=document.querySelector("#consultar_Saldo")
