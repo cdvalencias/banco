@@ -11282,3 +11282,11 @@ body.sidebar-toggled footer.sticky-footer {
 .buttonConfirmar{
   margin-left: 40px;
 }
+.nav-link:hover {
+  background-color: blue;
+  
+}
+
+#consultarmargin{
+  margin-top: 60px;
+}

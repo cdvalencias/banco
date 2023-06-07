@@ -16,44 +16,40 @@
         <!-- Barra lateral -->
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-            <!-- Sidebar - Brand -->
-            <li class="nav-item active">
-                <a class="nav-link" href="index.html">
-                    <span>Inicio</span></a>
-            </li>
-
+           
+           
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
 
             <!-- consultar saldo -->
-            <li class="nav-item active">
+            <li class="nav-item active" id="consultarmargin">
                 <a id="consultarSaldo" class="nav-link" href="#">
                     <span>Consultar saldo</span></a>
             </li>
             <!-- Retirar -->
             <li class="nav-item active">
-                <a class="nav-link" href="retirar.html">
+                <a id="retirarSaldo" class="nav-link" href="#">
                     <span>Retirar saldo</span></a>
             </li>
             </li>
 
             <!-- Transferir -->
             <li class="nav-item active">
-                <a class="nav-link" href="transferir.html">
+                <a id="transferirSaldo" class="nav-link" href="#">
                     <span>Transferir dinero</span></a>
             </li>
 
  
             <!--Consignar -->
             <li class="nav-item active">
-                <a class="nav-link" href="consignar.html">
+                <a id="consignar" class="nav-link" href="#">
                     <span>Consignar dinero</span></a>
             </li>
 
             <!-- Resumen -->
             <li class="nav-item active">
-                <a class="nav-link" href="tables.html">
+                <a id="consultarOperaciones" class="nav-link" href="#">
                     <span>Movimientos</span></a>
             </li>
 
@@ -65,11 +61,6 @@
             
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
-
-            <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
 
             <!-- logo -->
             <div>
@@ -92,7 +83,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                    <span class="mr-2 d-none d-lg-inline text-gray-600 small" id="nombre_Usuario">Douglas McGee</span>
                                     <img class="img-profile rounded-circle"
                                 src="img/undraw_profile.svg">
                             </a>   
@@ -103,7 +94,7 @@
                 <!-- Final Topbar -->
 
                 <!-- Begin Page Content -->
-                <section id="consultar saldo">
+                <section id="consultar_Saldo">
                     <div class="container">
                         <!-- Outer Row -->
                             <div class="row justify-content-center">
@@ -121,7 +112,7 @@
                                                                 <label for="saldo" class="form-control form-control-user"><center class="mb-3"><b>Saldo Disponible</b></center></label>
                                                             </div>
                                                             <div class="form-group">                                                             
-                                                                <input type="text" class="form-control form-control-user" id="">
+                                                                <input type="text" class="form-control form-control-user" id="saldo">
                                                             </div>
                                                         </form>
                                                         <hr>
@@ -134,7 +125,7 @@
                             </div>
                         </div>
                 </section>
-                <section id="retirar">
+                <section id="retirar_Saldo">
                     <div class="container">
                         <!-- Outer Row -->
                             <div class="row justify-content-center">
@@ -149,9 +140,9 @@
                                                         <div class="error"></div>
                                                         <form class="retirar">
                                                             <div class="form-group">                                                             
-                                                              <input type="text" class="form-control form-control-user" id="" placeholder="valor a retirar">
+                                                              <input type="text" class="form-control form-control-user" id="saldoARetirar" placeholder="valor a retirar">
                                                             </div>
-                                                            <a href="#" id="aceptarTrnasferencia" class="btn btn-primary btn-user btn-block">Aceptar retiro</a>
+                                                            <a href="#" id="aceptarRetiro" class="btn btn-primary btn-user btn-block">Aceptar retiro</a>
                                                         </form>
                                                         <hr>
                                                     </div>
@@ -163,7 +154,7 @@
                             </div>
                     </div>
                 </section>
-                <section id="trasnferir">
+                <section id="transferir_Saldo">
                     <div class="container">
                         <!-- Outer Row -->
                             <div class="row justify-content-center">
@@ -178,12 +169,12 @@
                                                         <div class="error"></div>
                                                         <form class="transferir">
                                                             <div class="form-group">                                                             
-                                                              <input type="text" class="form-control form-control-user" id="" placeholder="valor a transferir">
+                                                              <input type="text" class="form-control form-control-user" id="valorTransferencia" placeholder="valor a transferir">
                                                             </div>
                                                             <div class="form-group">
-                                                              <input type="text" class="form-control form-control-user" id="" placeholder="numero de cuenta a transferir">
+                                                              <input type="text" class="form-control form-control-user" id="numCuentaTransferir" placeholder="numero de cuenta a transferir">
                                                              </div>
-                                                            <a href="#" id="" class="btn btn-primary btn-user btn-block">Aceptar transferencia</a>
+                                                            <a href="#" id="aceptarTransferencia" class="btn btn-primary btn-user btn-block">Aceptar transferencia</a>
                                                         </form>
                                                         <hr>
                                                     </div>
@@ -195,7 +186,7 @@
                             </div>
                     </div>    
                 </section>
-                <section id="consignar saldo">
+                <section id="consignar_Saldo">
                     <div class="container">
                         <!-- Outer Row -->
                             <div class="row justify-content-center">
@@ -210,12 +201,12 @@
                                                         <div class="error"></div>
                                                         <form class="consignar">
                                                             <div class="form-group">                                                             
-                                                              <input type="text" class="form-control form-control-user" id="" placeholder="valor a consignar">
+                                                              <input type="text" class="form-control form-control-user" id="valorConsignar" placeholder="valor a consignar">
                                                             </div>
                                                             <div class="form-group">
-                                                              <input type="text" class="form-control form-control-user" id="" placeholder="numero de cuenta a consignar">
+                                                              <input type="text" class="form-control form-control-user" id="numCuentaConsignar" placeholder="numero de cuenta a consignar">
                                                             </div>
-                                                            <a href="#" id="" class="btn btn-primary btn-user btn-block">Aceptar consignacion</a>
+                                                            <a href="#" id="aceptarConsignacion" class="btn btn-primary btn-user btn-block">Aceptar consignacion</a>
                                                         </form>
                                                         <hr>
                                                     </div>
@@ -227,6 +218,24 @@
                             </div>
                       </div>
                 </section>
+                <section class="tabla">
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered tablaOperaciones" id="dataTable" width="100%" cellspacing="0">
+                                    <tr class="table table-bordered" id="iniTabla" width="100%" cellspacing="0">      
+                                        <th >dia y fecha   </th>      
+                                        <th> numero de Cajero</th>      
+                                        <th> tipo de operacion</th>     
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
 
                 </div>
             </div>

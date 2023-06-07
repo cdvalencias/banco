@@ -11,6 +11,8 @@ let passwords=[1111,2222,3333]
 let usuario=document.querySelector("#usuario")
 let password=document.querySelector("#password")
 
+// let nombreUsuario = document.querySelector("#nombre_Usuario")
+
 
 
 
@@ -27,7 +29,10 @@ function validar(e) {
         for (let i =0 ; i <= usuarios.length ; i++) { 
             if (usuarios[i]== usuario.value && passwords[i]==password.value) {
                 currentUser=usuario.value
-                location.href="index.html"   
+                location.href="index.html"
+                // nombreUsuario = document.querySelector("#nombre_Usuario")
+                // nombreUsuario.textContent="usuario[i]"
+
             }else{                                
                 errorLogin.textContent="usuario o contraseña no valido"
                 password.value = ""
