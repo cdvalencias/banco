@@ -10,17 +10,6 @@ let dineroRetirado = 0
 let dineroConsignado = 0
 let dineroTransferir = 0
 
-// let ocultarSaldo=document.querySelector("#consultar_Saldo")
-// ocultarSaldo.style.display="none"
-// let ocultarRetirar=document.querySelector("#retirar_Saldo")
-// ocultarRetirar.style.display="none"
-// let ocultarTransferir=document.querySelector("#transferir_Saldo")
-// ocultarTransferir.style.display="none"
-// let ocultarConsignacion=document.querySelector("#consignar_Saldo")
-// ocultarConsignacion.style.display="none"
-
-
-
 //funcion ocultar saldo
 
 function ocultarSaldo() {
@@ -46,6 +35,11 @@ function ocultarConsignacion() {
     ocultarConsignacion.style.display="none"
 }
 
+//funcion ocultar imagen de fondo
+function ocultarImagen() {
+    let ocultarImagen=document.querySelector(".imagenDeFondo")
+    ocultarImagen.style.display="none"
+}
 
 //evento consultar saldo
 
@@ -158,6 +152,7 @@ function saldo(e) {
     ocultarRetirar()
     ocultarTransferir()
     ocultarConsignacion()
+    ocultarImagen()
     
  }
 
@@ -168,7 +163,7 @@ consultarOperaciones.addEventListener("click",operaciones)
 
 function operaciones(e) {
     e.preventDefault();
-    let initabla = document.querySelector("#iniTabla")
+    let initabla = document.querySelector("#tablas")
     initabla.style.display="block" 
     tabla = document.querySelector(".tablaOperaciones")
     tabla.style.display="block"
@@ -176,6 +171,8 @@ function operaciones(e) {
     ocultarRetirar()
     ocultarTransferir()
     ocultarConsignacion()
+    ocultarImagen()
+    
 }
 
 // creacion de evento y funcion que muentra consignaciones
@@ -213,7 +210,8 @@ function consignar(e) {
     ocultarRetirar()
     ocultarTransferir()
     let ocultarConsignacion=document.querySelector("#consignar_Saldo")
-    ocultarConsignacion.style.display="block"  
+    ocultarConsignacion.style.display="block"
+    ocultarImagen()  
 }
 
 let aceptarconsignacion = document.querySelector("#aceptarConsignacion")
@@ -261,6 +259,7 @@ function retirar(e) {
     ocultarRetirar.style.display="block"
     ocultarTransferir() 
     ocultarConsignacion()
+    ocultarImagen()
     
 }
 
@@ -311,6 +310,7 @@ function transferencia(e) {
     let ocultarTransferir=document.querySelector("#transferir_Saldo")
     ocultarTransferir.style.display="block"
     ocultarConsignacion()
+    ocultarImagen()
 }
 
 let aceptarTransferencia = document.querySelector("#aceptarTransferencia")

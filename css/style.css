@@ -11290,3 +11290,10 @@ body.sidebar-toggled footer.sticky-footer {
 #consultarmargin{
   margin-top: 60px;
 }
+
+.imagenDeFondo{
+  height: 60%;
+  width: 60%;
+  display: flex;
+  margin-left: 17%;
+}
