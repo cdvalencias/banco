@@ -9,6 +9,7 @@ aceptar.addEventListener("click",validar)
 
 let intentos = 0
 let i = 0
+
 function validar(e) {
     e.preventDefault();
     let errorLogin=document.querySelector("#error")  
